@@ -65,6 +65,8 @@ class BookstoreApp {
     }
 
     async loadBooks(reset = false) {
+        console.log(`Loading books - isLoading: ${this.isLoading}, totalBooks: ${this.totalBooksAvailable}, currentBooks: ${this.books.length}`);
+
         if (this.isLoading || (this.totalBooksAvailable !== -1 && this.books.length >= this.totalBooksAvailable)) {
             return;
         }
@@ -89,6 +91,8 @@ class BookstoreApp {
                 startIndex: startIndex,
                 count: count
             };
+
+            console.log('Request body:', requestBody);
 
             const response = await fetch('https://bookstoretestingpro.runasp.net/api/Books/generate', {
                 method: 'POST',
@@ -308,7 +312,11 @@ class BookstoreApp {
     }
 
     handleScroll() {
-        if (this.isLoading) return;
+        console.log('Scroll event triggered');
+        if (this.isLoading) {
+            console.log('Already loading, skipping');
+            return;
+        }
 
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const windowHeight = window.innerHeight;
