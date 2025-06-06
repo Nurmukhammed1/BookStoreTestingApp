@@ -1,0 +1,104 @@
+.book-cover {
+    width: 120px;
+    height: 180px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.book-cover h6 {
+    font-size: 0.7rem;
+    margin: 5px 0;
+}
+
+.book-cover p {
+    font-size: 0.6rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.expandable-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.expandable-row:hover {
+    background-color: #f8f9fa;
+}
+
+.expanded {
+    background-color: #e3f2fd !important;
+}
+
+.book-details {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+}
+
+.review-item {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.gallery-item {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.likes-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.loading-spinner {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.view-toggle {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.seed-input-group {
+    position: relative;
+}
+
+.random-seed-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #6c757d;
+    z-index: 10;
+}
+
+.random-seed-btn:hover {
+    color: #007bff;
+}
