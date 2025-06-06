@@ -323,7 +323,7 @@ class BookstoreApp {
         const documentHeight = document.documentElement.scrollHeight;
 
         // Load more when user is near the bottom (e.g., within 400px)
-        if (scrollTop + windowHeight >= documentHeight - 800) {
+        if (scrollTop + windowHeight >= documentHeight - 100) {
             this.loadBooks(false);
         }
     }
