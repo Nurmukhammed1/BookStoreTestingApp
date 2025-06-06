@@ -87,7 +87,7 @@ class BookstoreApp {
                 region: region,
                 seed: parseInt(this.seedInput.value) || 0,
                 averageLikes: parseFloat(this.likesRange.value),
-                averageReviews: parseInt(this.reviewsInput.value) || 0,
+                averageReviews: parseFloat(this.reviewsInput.value) || 0,
                 startIndex: startIndex,
                 count: count
             };
