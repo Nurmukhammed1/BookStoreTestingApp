@@ -90,7 +90,7 @@ class BookstoreApp {
                 count: count
             };
 
-            const response = await fetch('https://bookstoretestingpro.runasp.net/api/books/generate', {
+            const response = await fetch('https://bookstoretestingpro.runasp.net/api/Books/generate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
