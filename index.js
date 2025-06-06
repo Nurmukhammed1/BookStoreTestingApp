@@ -67,7 +67,7 @@ class BookstoreApp {
     async loadBooks(reset = false) {
         console.log(`Loading books - isLoading: ${this.isLoading}, totalBooks: ${this.totalBooksAvailable}, currentBooks: ${this.books.length}`);
 
-        if (this.isLoading /*|| (this.totalBooksAvailable !== -1 && this.books.length >= this.totalBooksAvailable) */) {
+        if (this.isLoading || (this.totalBooksAvailable !== -1 && this.books.length >= this.totalBooksAvailable && this.totalBooksAvailable <= 20)) {
             return;
         }
 
