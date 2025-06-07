@@ -83,7 +83,7 @@ class BookstoreApp {
             const langParts = this.languageSelect.value.split('-');
             const language = langParts[0];
             const region = langParts[1];
-            const seedl = this.seedInput.value;
+            let seedl = this.seedInput.value;
 
             if(this.totalBooksAvailable >= 20) {
                 seedl = Math.floor(Math.random() * 9999);
