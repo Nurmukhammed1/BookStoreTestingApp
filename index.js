@@ -71,6 +71,8 @@ class BookstoreApp {
             return;
         }
 
+        if(this.totalBooksAvailable < 20)
+
         this.isLoading = true;
         this.loadingSpinner.style.display = 'block';
 
@@ -81,11 +83,16 @@ class BookstoreApp {
             const langParts = this.languageSelect.value.split('-');
             const language = langParts[0];
             const region = langParts[1];
+            const seedl = this.seedInput.value;
+
+            if(this.totalBooksAvailable >= 20) {
+                seedl = Math.floor(Math.random() * 9999);
+            }
 
             const requestBody = {
                 language: language,
                 region: region,
-                seed: parseInt(this.seedInput.value) || 0,
+                seed: seedl || 0,
                 averageLikes: parseFloat(this.likesRange.value),
                 averageReviews: parseFloat(this.reviewsInput.value) || 0,
                 startIndex: startIndex,
